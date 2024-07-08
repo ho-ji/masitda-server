@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Product = require('../models/Product')
 
-const url = `http://localhost:${process.env.PORT}/images`
+const url = `https://acceptable-virgina-yeji-85400ab7.koyeb.app/images`
 
 const product = [
   {
