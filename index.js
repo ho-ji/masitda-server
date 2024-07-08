@@ -19,6 +19,7 @@ app.use(
   })
 )
 app.use(cookieParser())
+app.use(express.static(path.join(__dirname, 'public')))
 
 const init = async (retryCount = 0) => {
   try {
