@@ -2,6 +2,7 @@ const service = require('../services/mdPickService')
 
 const getMDPick = async (req, res) => {
   const limit = parseInt(req.query.limit) || 0
+
   try {
     const list = await service.getMDPickProductList(limit)
     res.status(200).json(list.map((item) => item.product))

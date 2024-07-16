@@ -2,6 +2,7 @@ const service = require('../services/passwordResetService')
 
 const verifyResetToken = async (req, res) => {
   const passwordResetToken = req.params.token
+
   try {
     const result = await service.getResetToken(passwordResetToken)
     if (!result) return res.status(200).json({success: false, message: 'Expired Reset Password'})

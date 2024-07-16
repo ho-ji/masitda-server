@@ -2,6 +2,7 @@ const servie = require('../services/productService')
 
 const getProductRanking = async (req, res) => {
   const limit = parseInt(req.query.limit) || 50
+
   try {
     const ranking = await servie.getProductRankingList(limit)
     res.status(200).json(ranking)
