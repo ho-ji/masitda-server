@@ -2,7 +2,7 @@ const sgMail = require('@sendgrid/mail')
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 const sendEmail = async function ({name, email, token}) {
-  const resetUrl = `http://localhost:3000/passwordReset/${token}`
+  const resetUrl = `https://masitda.netlify.app/passwordReset/${token}`
   const msg = {
     to: email,
     from: 'masitda.shop@gmail.com',
