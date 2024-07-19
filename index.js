@@ -15,7 +15,7 @@ app.use(express.static('public'))
 app.use(express.json())
 app.use(
   cors({
-    origin: 'https://masitda.netlify.app/',
+    origin: 'https://masitda.netlify.app',
     credentials: true,
   })
 )
